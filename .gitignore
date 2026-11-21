@@ -1,0 +1,36 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+engine/dist/
+engine/build/
+
+# ---- Node / 前端 ----
+node_modules/
+desktop/dist/
+
+# ---- Rust / Tauri ----
+desktop/src-tauri/target/
+desktop/src-tauri/binaries/
+
+# ---- 运行时与私密数据（绝不能上传）----
+.env
+*.key
+*.epub
+*.exe
+*.msi
+*.zip
+runtime/
+output/
+release/
+精排输出书籍/
+samples/private/
+
+# ---- 系统 ----
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

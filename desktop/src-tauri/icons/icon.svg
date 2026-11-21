@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- 可复用的巴洛克角花卷草纹饰（左上角基准，其余三角镜像复用） -->
+    <g id="baroque-corner">
+      <!-- 主角花外廓 -->
+      <path d="M 88 504 C 88 468, 118 446, 156 446 L 198 446 C 176 462, 168 474, 152 474 C 132 474, 120 486, 120 506 L 120 548 C 102 534, 88 522, 88 504 Z" fill="#A87748"/>
+      <!-- 内卷涡旋 -->
+      <path d="M 102 496 C 102 472, 122 458, 148 458 C 166 458, 176 470, 170 482 C 164 492, 150 492, 144 484 C 140 478, 146 470, 154 472" fill="none" stroke="#DFBA91" stroke-width="6" stroke-linecap="round"/>
+      <!-- 侧翼卷草叶 -->
+      <path d="M 192 452 C 218 450, 240 460, 256 474 C 234 476, 214 472, 198 464 Z" fill="#C49363"/>
+      <path d="M 94 542 C 92 568, 102 590, 116 606 C 118 584, 114 564, 106 548 Z" fill="#C49363"/>
+      <!-- 铆钉圆点 -->
+      <circle cx="122" cy="480" r="7" fill="#8A5B30"/>
+      <circle cx="122" cy="480" r="3.2" fill="#DFBA91"/>
+    </g>
+
+    <!-- 巴洛克书脊底座繁复卷草徽章 -->
+    <g id="spine-crest">
+      <!-- 左右对称大涡卷 -->
+      <path d="M 512 850 C 468 850, 444 878, 412 878 C 384 878, 368 860, 376 842 C 382 828, 400 828, 406 840 C 410 848, 402 856, 394 852" fill="none" stroke="#8A5B30" stroke-width="10" stroke-linecap="round"/>
+      <path d="M 512 850 C 556 850, 580 878, 612 878 C 640 878, 656 860, 648 842 C 642 828, 624 828, 618 840 C 614 848, 622 856, 630 852" fill="none" stroke="#8A5B30" stroke-width="10" stroke-linecap="round"/>
+      <!-- 卷草花叶填充 -->
+      <path d="M 436 854 C 454 834, 480 832, 512 842 C 544 832, 570 834, 588 854 C 566 868, 540 874, 512 868 C 484 874, 458 868, 436 854 Z" fill="#A87748"/>
+      <!-- 中央菱形巴洛克徽章 -->
+      <path d="M 512 818 L 542 852 L 512 886 L 482 852 Z" fill="#C49363" stroke="#8A5B30" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M 512 832 L 528 852 L 512 872 L 496 852 Z" fill="#DFBA91"/>
+    </g>
+  </defs>
+
+  <!-- ================= 1. 浅棕色精装书壳与巴洛克雕花边框 ================= -->
+  <g id="hardcover-base">
+    <!-- 外层书壳底板（浅棕色） -->
+    <rect x="104" y="476" width="816" height="388" rx="28" ry="28" fill="#A87748" stroke="#8A5B30" stroke-width="10"/>
+    <!-- 内层雕花嵌线框 -->
+    <rect x="126" y="498" width="772" height="344" rx="18" ry="18" fill="#C49363" stroke="#DFBA91" stroke-width="5"/>
+    <!-- 书壳内侧压纹边框 -->
+    <rect x="142" y="512" width="740" height="316" rx="12" ry="12" fill="#B48252" stroke="#8A5B30" stroke-width="4"/>
+
+    <!-- 四角对称巴洛克角花 -->
+    <use href="#baroque-corner"/>
+    <use href="#baroque-corner" transform="translate(1024, 0) scale(-1, 1)"/>
+    <use href="#baroque-corner" transform="translate(0, 1340) scale(1, -1)"/>
+    <use href="#baroque-corner" transform="translate(1024, 1340) scale(-1, -1)"/>
+
+    <!-- 书壳左右边缘对称卷草纹 -->
+    <path d="M 118 624 C 98 636, 98 656, 114 670 C 98 684, 98 704, 118 716" fill="none" stroke="#DFBA91" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 906 624 C 926 636, 926 656, 910 670 C 926 684, 926 704, 906 716" fill="none" stroke="#DFBA91" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 底部书脊巴洛克徽章 -->
+    <use href="#spine-crest"/>
+  </g>
+
+  <!-- ================= 2. 摊开的空白书页（洁白无文字，仅保留装订层厚度感） ================= -->
+  <g id="blank-open-pages">
+    <!-- 书页下方厚度叠层（浅暖米白，区分书壳与空白页） -->
+    <path d="M 156 508 C 280 492, 412 496, 512 536 C 612 496, 744 492, 868 508 L 868 812 C 744 794, 612 798, 512 832 C 412 798, 280 794, 156 812 Z" fill="#EFE5D8" stroke="#8A5B30" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M 164 494 C 284 478, 414 484, 512 524 C 610 484, 740 478, 860 494 L 860 794 C 740 776, 610 782, 512 818 C 414 782, 284 776, 164 794 Z" fill="#F8F3EB" stroke="#DFBA91" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- 左空白页（纯白） -->
+    <path d="M 172 480 C 292 464, 416 472, 512 514 L 512 806 C 416 768, 292 762, 172 780 Z" fill="#FFFFFF" stroke="#8A5B30" stroke-width="5" stroke-linejoin="round"/>
+    <!-- 右空白页（纯白） -->
+    <path d="M 852 480 C 732 464, 608 472, 512 514 L 512 806 C 608 768, 732 762, 852 780 Z" fill="#FFFFFF" stroke="#8A5B30" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- 书页中缝极浅折痕（无文字、无横线，保持空白书页纯净） -->
+    <path d="M 498 510 L 512 514 L 512 806 L 498 800 Z" fill="#F3ECE2"/>
+    <path d="M 526 510 L 512 514 L 512 806 L 526 800 Z" fill="#FAF6F0"/>
+    <line x1="512" y1="514" x2="512" y2="806" stroke="#C49363" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- ================= 3. 立在书页上的浅棕色巴洛克鹅毛笔 ================= -->
+  <g id="baroque-quill">
+    <!-- 鹅毛笔整体略微向右倾斜立于书页中央 (512, 672) -->
+    <!-- 笔尖在书页上的极简扁平落点小圆垫/投影 -->
+    <ellipse cx="512" cy="674" rx="22" ry="7" fill="#DFBA91" opacity="0.75"/>
+
+    <!-- 羽毛主体左半羽片（浅棕色） -->
+    <path d="M 556 530 C 546 420, 588 280, 672 184 C 708 142, 748 118, 774 114 C 760 156, 738 206, 704 260 C 668 318, 636 390, 600 478 L 570 538 Z" fill="#C49363" stroke="#8A5B30" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- 羽毛主体右半羽片（更亮一些的暖浅棕） -->
+    <path d="M 572 540 C 618 478, 678 416, 728 338 C 766 278, 784 202, 774 114 C 742 178, 696 250, 650 326 C 612 390, 584 468, 566 536 Z" fill="#DFBA91" stroke="#8A5B30" stroke-width="7" stroke-linejoin="round"/>
+
+    <!-- 巴洛克风格羽片纹理线（从羽轴向两侧优雅辐射，扁平简洁） -->
+    <path d="M 654 328 C 632 308, 608 298, 590 296" fill="none" stroke="#8A5B30" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 684 268 C 662 250, 642 242, 624 240" fill="none" stroke="#8A5B30" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 664 338 C 688 330, 712 316, 732 296" fill="none" stroke="#8A5B30" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 692 276 C 716 268, 738 254, 756 234" fill="none" stroke="#8A5B30" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- 羽毛外侧巴洛克卷草华丽花边 -->
+    <path d="M 556 440 C 522 424, 514 386, 536 366 C 552 352, 570 364, 562 380 C 556 392, 542 388, 544 376" fill="none" stroke="#A87748" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 696 410 C 732 404, 748 372, 734 348 C 724 332, 704 340, 708 356" fill="none" stroke="#A87748" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- 中央羽轴（贯穿羽毛至笔杆） -->
+    <path d="M 768 122 C 706 232, 640 362, 558 558" fill="none" stroke="#8A5B30" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 764 128 C 704 236, 640 364, 560 554" fill="none" stroke="#F4DEC2" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- 巴洛克雕花笔箍（连接羽管与笔尖） -->
+    <g transform="translate(558, 558) rotate(24)">
+      <!-- 雕花笔箍主体 -->
+      <rect x="-18" y="-12" width="36" height="38" rx="8" fill="#A87748" stroke="#8A5B30" stroke-width="6"/>
+      <line x1="-18" y1="2" x2="18" y2="2" stroke="#DFBA91" stroke-width="4"/>
+      <line x1="-18" y1="14" x2="18" y2="14" stroke="#DFBA91" stroke-width="4"/>
+      <!-- 笔箍两侧巴洛克小涡卷 -->
+      <path d="M -18 4 C -36 -2, -40 18, -26 24" fill="none" stroke="#8A5B30" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 18 4 C 36 -2, 40 18, 26 24" fill="none" stroke="#8A5B30" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="-26" cy="24" r="4.5" fill="#C49363"/>
+      <circle cx="26" cy="24" r="4.5" fill="#C49363"/>
+
+      <!-- 鹅毛笔金属/骨质雕花笔尖（浅棕色系） -->
+      <path d="M -14 26 L 14 26 L 20 68 L 0 124 L -20 68 Z" fill="#C49363" stroke="#8A5B30" stroke-width="6" stroke-linejoin="round"/>
+      <!-- 笔尖高光半侧 -->
+      <path d="M 0 26 L 14 26 L 20 68 L 0 124 Z" fill="#DFBA91"/>
+      <path d="M 0 26 L 14 26 L 20 68 L 0 124 Z" fill="none" stroke="#8A5B30" stroke-width="5" stroke-linejoin="round"/>
+      <!-- 笔尖中缝与心形气孔 -->
+      <line x1="0" y1="74" x2="0" y2="122" stroke="#8A5B30" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="0" cy="68" r="6" fill="#8A5B30"/>
+    </g>
+  </g>
+</svg>

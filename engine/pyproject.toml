@@ -1,0 +1,30 @@
+[project]
+name = "epub-refiner-engine"
+version = "0.1.0"
+description = "AI Agent engine for cleaning and re-typesetting TXT / EPUB into standard EPUB3"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "charset-normalizer>=3.5.2",
+    "fastapi>=0.165.0",
+    "keyring>=25.7.0",
+    "litellm>=1.110.1",
+    "lxml>=6.1.3",
+    "pydantic-settings>=2.16.3",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+epub-refiner-engine = "epub_refiner_engine:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pyinstaller>=6.22.3",
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
